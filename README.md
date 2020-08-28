@@ -1,33 +1,52 @@
 # Author: Joseph Lee
 ## 17 may 2020
 ## git hub 
-# [Visit GitHub!](https://github.com/josephlee3454/math-series).
 ## resources: stack overflow 
 
 # overveiw 
-* The first words you see on the Django website are
 
-* Django makes it easier to build better Web apps more quickly and with less code.
+* Django has a powerful Object Relational Mapper that allows us to persist data using Python instead of SQL.
 
-* The next quote you’ll see is
-
-* The web framework for perfectionists with deadlines.
-
-* In this class we’ll build out a small, but functional, multi page web site using Django.
-
-* We’ll get a feel for the “Django Way” and see the dramatic performance gains you can get with a mature, robust framework.
+* Today you’ll build out a project with one model and wire up that model using Django Views.
 
 # feature tasks 
-* Create web site in Django with 2 pages
-* home page
-* about page
-* create views/urls/templates as needed for home and about pages
-* use ancestor template to contain navigation elements
-* Should be built the “Django way” aka match the structure of in-class demo
+* create blog_project project
+* create blog app
+* migrate data
+* create Post model
+* add title as a CharField with maximum length of 64 characters.
+* add author ForeignKey related to Django’s built in user model with CASCADE delete option.
+* add body TextField
+* add model to admin
+* modify Post model have user friendly display in admin
+* create migrations and migrate data
+* create a super user
+* Add a few posts via Admin panel
+* Addtemplates folder in root of project
+* register templates folder in project settings
+* create HomePageView
+* extend ListView
+* give a template of home.html
+* associate Post model
+* create home.html template
+* use Django Templating Language to display each post’s title
+* create base.html ancestor template
+* add main html document
+* use Django Templating Language to allow child templates to insert content
+* update url patterns for app and project
+* view home page and confirm posts showing properly
+* add detail view
+* link post_detail.html template
+* associate Post model
+* create post_detail.html template
+* template should extend base
+* content should display post title and body
+* update app urlpatterns to handle detail view
+* account for primary key in url
+* add link in home page template to related post detail page
 # Dependencies 
 * poetry
 * python
-* pyenv 
 * django 
 
 
