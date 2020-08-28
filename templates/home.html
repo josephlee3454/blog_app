@@ -5,7 +5,7 @@
   <ul>
     {% for BlogApp in object_list %}
     <!-- <li>the post is: {{ BlogApp.name }} </li> -->
-    <li>Blog post: <a href="{% url 'blog' BlogApp.id %}">{{ BlogApp.name }}</a></li>
+    <li>Blog post: <a href="{% url 'post-detail' BlogApp.id %}">{{ BlogApp.name }}</a></li>
     {% endfor %}
   </ul>
 {% endblock content %}
