@@ -11,3 +11,10 @@ class BlogTest(SimpleTestCase):
 
   def test_home_page_status(self):
     self.helper_status_code_200('home')
+
+  def test_home_page_template(self):
+    url = reverse('home')
+    response = self.client.get(url)
+
+    self.assertTemplateUsed(response, 'home.html')
+    self.assertTemplateUsed(response, 'base.html')
