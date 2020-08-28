@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>post list</h2>
+  <ul>
+    {% for BlogApp in object_list %}
+    <!-- <li>the post is: {{ BlogApp.name }} </li> -->
+    <li>Blog post: <a href="{% url 'blog' BlogApp.id %}">{{ BlogApp.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
